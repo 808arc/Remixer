@@ -1,3 +1,6 @@
 librosa
 pandas
-billboard.py
+billboard.py==7.0.0
+youtube-search-python
+pytube
+youtube_dl

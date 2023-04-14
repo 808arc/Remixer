@@ -1,8 +1,8 @@
-#statistic and research part for defining a right song 
 import billboard
 import json
 from datetime import datetime
 
+#statistic and research part for defining a right song 
 # create an empty list to store the chart data
 
 track_name = []
@@ -21,24 +21,15 @@ for custom_date in dates:
     for song in chart:
         #    song_list.append(song.title)
         #    song_list.append(song.artist)
-        track_name.append(song.title + " by " + song.artist)
-        
-    #import pandas as pd
-    # create a dictionary with data
-    #tracklist = {'name': track_name}
-
-    # create a DataFrame from the dictionary
-    #df = pd.DataFrame(tracklist)
-    #df.drop_duplicates()
-
-
+        track_name.append(song.title + " - " + song.artist)        
 # open a JSON file in write mode
-with open("data.json", "w") as file:
+with open("billboard.json", "w") as file:
     # write the data to the file in JSON format
     json.dump(track_name, file)
 
 print(len((track_name)))
-
 track_name2 = list(set(track_name))
-
 print(len((track_name2)))
+
+#does i need this track_name? no i didnt / main purpose is to check does code work 
+#listset
